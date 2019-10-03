@@ -34,7 +34,7 @@ function scssTask(){
         .pipe(sourcemaps.write('.'))
         .pipe(dest(destFiles.cssPathDest))
         .pipe(browserSync.stream())
-        .pipe(lec());
+        .pipe(lineec());
 }
 
 //JS task
@@ -43,7 +43,7 @@ function jsTask(){
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(dest(destFiles.jsPathDest))
-        .pipe(lec());
+        .pipe(lineec());
 }
 
 //Cachebusting task
